@@ -199,7 +199,51 @@
         $cadena2 = "ñlkjh";
         $cadena1 = "$cadena1 ñlkjh";
         echo '<br>', $cadena1[1]; // s
-        
+
+        echo $cadena1[-2];
+
+        $cadena2[2] = 'X';
+        $cadena2[1] = 'Z';
+        echo '<br>', $cadena2;
+
+        var_dump($cadena2);
+        $cadena2[17] = 'Y';
+        echo '<br>';
+        var_dump($cadena2);
+
+
+        /* HEREDOC NOWDOC */
+
+        $un_texto = <<<MENSAJE
+        Este es un texto que $cadena1
+        tiene  saltos de línea $cadena2
+        pero que posiblente no se muestren bien.
+        MENSAJE;
+
+        echo '<br>', $un_texto;
+
+        echo '<br>';
+
+        echo nl2br($un_texto);
+
+        $un_texto_2 = <<<'MENSAJE'
+        Este es un texto que
+        tiene  saltos de línea
+        pero que posiblente no se muestren bien.
+        MENSAJE;
+
+        echo nl2br($un_texto_2);
+
+        // NULL
+        $xx = null;
+        $xx = NULL;
+        echo '<br>';
+        var_dump($xx);
+        var_dump(is_null($xx));
+
+        var_dump($xx === null);
+
+        var_dump($super_variable_colosal_magestic_pro_and_knucles);
     ?>
 </body>
 </html>
