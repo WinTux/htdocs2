@@ -244,6 +244,109 @@
         var_dump($xx === null);
 
         var_dump($super_variable_colosal_magestic_pro_and_knucles);
+
+        $xx = 89;echo '<br> Valor antes de unset: ';
+        var_dump($xx);
+        unset($xx);
+        echo '<br> Valor despues de unset: ';
+        var_dump($xx);
+
+        $xx = null;
+        echo '<br> Valor despues de asignación a null: ';
+        var_dump($xx);
+        echo '<br> Valor despues de casteo a string: ';
+        var_dump((string)$xx);
+        echo '<br> Valor despues de casteo a int: ';
+        var_dump((int)$xx);
+        echo '<br> Valor despues de casteo a bool: ';
+        var_dump((bool)$xx);
+        echo '<br> Valor despues de casteo a array: ';
+        var_dump((array)$xx);
+
+        // Arreglos
+        $nombres = array('Pepe','Ana','Sofía');
+        $nombres = ['Pepe','Ana','Sofía'];
+        echo '<br>', $nombres[1];
+        /*
+        
+        0 -> Pepe   (0,Pepe)
+        1 -> Ana    (1,Ana)
+        2 -> Sofía  (2,Sofía)
+
+        */
+        echo '<br>Retorna nulo, si el índice no existe: ', $nombres[8];
+
+        if(isset($nombres[8])) echo '<br>Existe el elemento en 8.';
+        else echo '<br>No existe tal índice.';
+
+        $nombres[0] = 'Samantha';
+        echo '<br>', $nombres[0];
+        echo '<br>', var_dump($nombres);
+        echo '<pre>';
+        print_r($nombres);
+        echo '<pre>';
+        echo '<br>', count($nombres);
+
+        $nombres[] = 'Sara';
+        echo '<pre>';
+        print_r($nombres);
+        echo '<pre>';
+        echo '<br>', count($nombres);
+
+        array_push($nombres, 'Martha', 'Lizeth','Mónica');
+        echo '<pre>';
+        print_r($nombres);
+        echo '<pre>';
+        echo '<br>', count($nombres);
+
+        $profesiones = [
+            'Pepe' => 'Informático',
+            'Ana' => 'Ing. Telecomunicaciones',
+            'Sofía' => 'Ing. de Sistemas'
+        ];
+        echo '<br>', $profesiones['Ana'];
+        echo '<pre>';
+        print_r($profesiones);
+        echo '<pre>';
+        echo '<br>', count($profesiones);
+        echo '<br>Elemento en 2: ', $profesiones[2];
+
+        $nom = 'Sofía';
+        echo '<br>', $profesiones[$nom];
+
+        $profesiones['Samantha'] = 'Admin. de empresas';
+        echo '<pre>';
+        print_r($profesiones);
+        echo '<pre>';
+        echo '<br>', count($profesiones);
+
+        $nom = 'Carlos';
+        $pro = 'Ing. industrial';
+        $profesiones[$nom] = $pro;
+        echo '<pre>';
+        print_r($profesiones);
+        echo '<pre>';
+        echo '<br>', count($profesiones);
+
+        $profesiones = [
+            'Pepe' => [
+                'titulo' => 'Lic. Informática',
+                'email' => 'pepe@hotmail.com',
+                'promedio' => 7.5,
+                'disponible' => true,
+                'experiencia' => [
+                    ['entidad' => 'EPSAS', 'gestion' => 2018],
+                    ['entidad' => 'GAMLP', 'gestion' => 2022]
+                ]
+            ]
+        ];
+        echo '<pre>';
+        print_r($profesiones);
+        echo '<pre>';
+        echo '<br>', count($profesiones);
+
+        echo '<br>', $profesiones['Pepe']['email'];
+        echo '<br>', $profesiones['Pepe']['experiencia'][0]['gestion'];
     ?>
 </body>
 </html>
