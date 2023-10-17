@@ -346,7 +346,76 @@
         echo '<br>', count($profesiones);
 
         echo '<br>', $profesiones['Pepe']['email'];
-        echo '<br>', $profesiones['Pepe']['experiencia'][0]['gestion'];
+        echo '<br>', $profesiones['Pepe']['experiencia'][56]['gestion'];
+
+        $arr = [1 => 'abc', '1' => 'xyz'];
+        print_r($arr);
+
+        $arr = [1 => 'Ana', true => 'Pepe', '1' => 'Sofía', 1.75 => 'Sam', null => 'Carlos'];
+        print_r($arr);
+
+        echo '<br>', $arr[null];
+
+
+        $arr = ['Pepe', 'Sofía', 38 => 'Mónica', 'Carlos', 'Ana'];
+        print_r($arr);
+
+        echo '<br>', array_pop($arr);
+        print_r($arr);
+
+        echo '<br>', array_shift($arr);
+        print_r($arr);
+
+        $arr = ['Pepe', 'Sofía', 'nombre' => 'Mónica', 'Carlos', 'Ana'];
+        print_r($arr);
+
+        echo '<br>', array_shift($arr);
+        print_r($arr);
+
+        unset($arr[1]);
+        print_r($arr);
+
+        unset($arr[0], $arr[2]);
+        print_r($arr);
+
+        $arr = [5,4,3,2,1];
+        unset($arr[0], $arr[1],$arr[2], $arr[3], $arr[4]);
+        $arr[] = 6;
+        print_r($arr);
+
+        $xx = 3;
+        var_dump((array)$xx);
+
+        $xx = null;
+        var_dump((array)$xx);
+
+        $arr = ['xx' => 1, 'yy' => null];
+        var_dump(array_key_exists('xx', $arr));
+        var_dump(isset($arr['xx']));
+
+        var_dump(array_key_exists('yy', $arr));
+        var_dump(isset($arr['yy']));
+
+
+        // Expresiones
+        $a = 1;// el 1 es un literal (es una expresión)
+        $b = $a; // $a es una variable (es una expresión)
+        $res = $a == $b;
+
+        // Operadores
+        $res = 5 + 3;
+        $v = '123';
+        var_dump(+$v);
+        var_dump(-$v);
+        $v = -'123';
+
+        $a = 9;
+        $b =3;
+        var_dump($a/$b);
+        $b =4;
+        var_dump($a/$b);
+        $b =3.0;
+        var_dump($a/$b);
     ?>
 </body>
 </html>
