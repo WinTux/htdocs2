@@ -416,6 +416,18 @@
         var_dump($a/$b);
         $b =3.0;
         var_dump($a/$b);
+
+        //ESTRUCTURAS DE CONTROL Y FUNCIONES
+        $nota = 61;
+        if($nota > 90){
+            echo '<br>Excelente.';
+        }elseif($nota > 60){
+            echo '<br>Muy bien.'; 
+        }elseif($nota >50){
+            echo '<br>bien.'; 
+        }else{
+            echo '<br>Mal.'; 
+        }
     ?>
 </body>
 </html>
