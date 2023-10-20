@@ -1,5 +1,10 @@
-<?php   require_once 'tercero.php';
-        require_once 'tercero.php'; ?>
+<?php   /*require 'archivo.php';
+        $aaa++;
+        echo '<br>aaa: ', $aaa;
+        require 'archivo.php'; */
+        $rex = include 'archivo.php';
+        var_dump($rex);
+        ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -210,6 +215,7 @@ $d = match($dia){
     default => 'Día no definido'
 };
 echo '<br>', $d;
+echo '<br>Nuestra variable aaa tiene el valor: ', $aaa;
 
 return;
 
